@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pizza &amp; Friendz</title>
+                <link rel="shortcut icon" href="images/icon.png">
+
+        <link rel="stylesheet" href="css/style.css"/>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+</head>
+<body ng-app="PizzaApp">
+	<header role="banner">
+             <img src="images/logo.png" alt="logo">
+		<ul class="links">
+			<li><a href="#!home" class="cool-link">Home</a></li>
+			<li><a href="#!menu" class="cool-link">Menu</a></li>
+			<li><a href="#!deals" class="cool-link">Deals</a></li>
+		    <li><a href="#about" class="cool-link">About</a></li>
+		    <li><a href="#contact" class="cool-link">Contact</a></li>
+		    <li><a href="#sitemap" class="cool-link">Where are we</a></li>
+
+		</ul>
+	</header>
+	        <!-- Templates -->
+    	<div ng-view></div>
+
+
+    <!--Video background  -->
+        <section class="hero-unit">
+            <video src="Video/pizza.mp4" controls autoplay loop muted width="100%">
+            </video>
+             
+        </section>
+                 <!-- Text on video -->
+    <section class="text">
+            <h1>We are Creative</h1>
+            <h3>Find more</h3>
+        </section>
+    
+        <div class="row">
+                <div class="col-md-12"><img src="images/services.PNG" class="img-responsive"  alt="Services Image">
+              
+  </div>
+        </div>
+
+        <footer style="background: linear-gradient(to left, #000000, #434343);
+                color: #fff">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center" id="about">
+                        <h2 style="font-family: 'Lobster', cursive">About</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                    </div>
+                    <div class="col-md-4" id="contact">
+                        <h2 class="text-center" style="font-family: 'Lobster', cursive">Contact</h2>
+                        <form role="form">
+                            <div class="form-group col-lg-4">
+                                <label class="form-control-label" for="form-group-input">Name</label>
+                                <input type="text" class="form-control" id="form-group-input" name="name">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label class="form-control-label" for="form-group-input">Email</label>
+                                <input type="text" class="form-control" id="form-group-input" name="email">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label class="form-control-label" for="form-group-input">Reason</label>
+                                <select size="0" class="form-control" name="reason">
+                                    <option>Sales</option>
+                                    <option>Tech Support</option>
+                                    <option>General Feedback</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label class="form-control-label" for="form-group-input">Notes</label>
+                                <textarea class="form-control" id="form-group-input" name="notes" rows="6"></textarea>
+                                <br>
+                                <button class="btn btn-primary">Send Message</button>
+                            </div>
+                    </div>
+                    <div class="col-md-4" id="sitemap">
+                        <h2 class="text-center" style="font-family: 'Lobster', cursive">We are here</h2>
+                        <iframe width="400" height="290" frameborder="3" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJfUaxZdq3w4kRiJTjJLtM640&key=AIzaSyC-bmmMMKShKCN5cqQtVLeht7vEiohUY4I" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </footer>
+   <!-- Custom Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <script src="js/main.js"></script>
+
+</body>
+</html>
