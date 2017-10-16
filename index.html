@@ -2,53 +2,83 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Pizza &amp; Friendz</title>
-                <link rel="shortcut icon" href="images/icon.png">
+	<title>Friendz &amp; Pizza</title>
+       <link rel="shortcut icon" href="images/icon.png">
 
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-
 </head>
-<body ng-app="PizzaApp">
-	<header role="banner">
-             <img src="images/logo.png" alt="logo">
-		<ul class="links">
-			<li><a href="#!home" class="cool-link">Home</a></li>
-			<li><a href="#!menu" class="cool-link">Menu</a></li>
-			<li><a href="#!deals" class="cool-link">Deals</a></li>
-		    <li><a href="#about" class="cool-link">About</a></li>
-		    <li><a href="#contact" class="cool-link">Contact</a></li>
-		    <li><a href="#sitemap" class="cool-link">Where are we</a></li>
 
-		</ul>
-	</header>
-	        <!-- Templates -->
-    	<div ng-view></div>
+<body ng-app="PizzaApp" ng-controller="MainCtrl">
 
+	<header id="sticky-header" class="sticky">
+        <div class="main-menu-area">
+            <div class="container">
+            <div class="col-md-2 col-sm-6 col-xs-4"> 
 
-    <!--Video background  -->
-        <section class="hero-unit">
-            <video src="Video/pizza.mp4" controls autoplay loop muted width="100%">
-            </video>
-             
-        </section>
-                 <!-- Text on video -->
-    <section class="text">
-            <h1>We are Creative</h1>
-            <h3>Find more</h3>
-        </section>
-    
-        <div class="row">
-                <div class="col-md-12"><img src="images/services.PNG" class="img-responsive"  alt="Services Image">
-              
-  </div>
+            <div class="logo">            
+                <a href="#"><img src="images/logo1.png" class="img-responsive"></a>
+            </div>
+</div>
+               <div class="col-md-10 col-sm-6 col-xs-8">
+
+                <div class="main-menu">
+               <nav>
+                   <ul class="links">
+                       <li><a href="#!home" class="cool-link">home</a></li>
+                       <li><a href="#!ownpizza" class="cool-link">Your Own Pizza</a></li>
+                       <li><a href="#!deals" class="cool-link">deals</a></li>
+                       <li><a href="#aboutus" class="cool-link">aboutus</a></li>
+                       <li><a href="#sitemap" class="cool-link">Location</a></li>   
+                       <li><a class="btn order" target href="#">Order Online</a></li>
+                   </ul>
+
+               </nav>
+                </div>
+            </div>
+    </div>
+    </div>
+
+</header>
+ 
+         
+            <!-- Slider -->
+<div class="slider-area">
+    <div class="item-video">
+        <video src="Video/pizza.mp4" controls autoplay loop muted width="100%">
+            </video> 
+</div>
+      <div class="slider-title">
+            <div class="table-cell">
+                <h1>custom Artisan style Pizzas</h1>
+                <h2>Superfast</h2>
+            <a class="btn" target href="#" style="background: red; color: #fff; text-align: center; margin: 15px; letter-spacing: 3px">Find A location</a>
+          <a class="btn" target href="#" style="background: red; color: #fff; text-align: center; margin: 15px; letter-spacing: 3px">Order Online</a>
+            </div>
         </div>
+</div>
+
+
+            <!-- Templates -->
+                    <div ng-view></div>
+                    
+
+                    <!-- Banner -->
+        <div class="row slantedDiv">
+                <div class="col-md-12"><img src="images/services.PNG" class="img-responsive"  alt="Services Image">
+              </div>
+        </div>
+
+                      <!-- footer -->
 
         <footer style="background: linear-gradient(to left, #000000, #434343);
                 color: #fff">
@@ -82,7 +112,7 @@
                                 <label class="form-control-label" for="form-group-input">Notes</label>
                                 <textarea class="form-control" id="form-group-input" name="notes" rows="6"></textarea>
                                 <br>
-                                <button class="btn btn-primary">Send Message</button>
+                                <button class="btn btn-primary" id="send">Send Message</button>
                             </div>
                     </div>
                     <div class="col-md-4" id="sitemap">
@@ -91,11 +121,35 @@
                     </div>
                 </div>
             </div>
-        </footer>
-   <!-- Custom Scripts -->
+<div class="scroll-btn" style="position: relative">
+    <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+</a>
+<ul class="icons">
+       <li style="font-size: 14px; margin-top: -24px">Follow Us on :</li>
+        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/login target=_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    </ul>
+
+<p class="text-center" style="color: #fff; padding: 10px; margin-top:50px">&copy; 2017 Friends &amp; Pizza International, Inc. All Rights Reserved.</p>
+
+</div>
+
+</footer>
+    
+
+
+                     <!-- Custom Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-       <script src="js/main.js"></script>
+        <script src="bower_components/wow/dist/wow.min.js"></script>
+        <script>
+              new WOW().init();
+              </script>
+           <script src="js/main.js"></script>
+
 
 </body>
 </html>

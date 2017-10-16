@@ -1,52 +1,85 @@
-/*To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-
- 
-    Created on : Oct 13, 2017, 9:53:52 AM
-    Author     : Rohan*/
-
+@import url('link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet"
+)
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 header {
-    background: linear-gradient(to right, #f0c27b, #4b1248);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 115px;
+    z-index: 11;
 }
 
-header img {
-    margin: 5px 5px;
-    padding: 10px;
-    width: 170px;
-    height: 110px;
-}
-/*                   Top-navbar*/
-
-ul.links li {
-  list-style-type: none;
-  display: inline-block;
-
+header.sticky{
+	background: #444;
+	position: fixed;
 }
 
-ul.links li a {
-  position:relative; 
-  top:-100px; 
-  left:800px;
+.sticky .main-menu ul li a{
+	padding: 15px 10px;
+	color: #fff;
+}
+ /*button header*/
+.sticky .main-menu ul li .order{
+   padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+     /*Navbar*/
+
+.main-menu-area {}
+.logo {
+	   margin-top: 18px;
+	   transition: all 0.3s ease 0s;
+	}
+	.sticky .logo {
+	   margin-top: 3px;
+	}
+	.sticky .logo a{
+		color: #fff;
+	}
+.logo a {
+   color: #444444;
+   font-size: 18px;
+   font-weight: 700;
+   text-transform: uppercase;
+   display: inline-block;
+}
+
+.main-menu {}
+.main-menu .links {}
+
+.main-menu .links li {
+	display: inline-block;
+}
+.main-menu .links li a {
     text-decoration: none;
-    display: inline-block;
     color: #fff;
-    font-family: 'Lobster', cursive;
     text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 20px 10px;
     cursor: pointer;
-    font-size: 16px;
-    padding: 0 10px;
+    display: block;
 }
+ /*Button*/
 
+.links li a.order {
+    padding: 4px;
+    padding-right:10px;
+    padding-left: 10px;
+    background: red;
+    margin:15px;
+    color: #fff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
 .cool-link::after {
     content: '';
     display: block;
@@ -61,40 +94,392 @@ ul.links li a {
     transition: width .3s;
 }
 
-
-.hero-unit {
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    opacity: 0.7;
+      /*Slider */
+.slider-title{
+	display: table;
+	height: 100%;
+	text-align: center;
+	width: 100%;
 }
 
-
-
-.text h1 {
+.item-video{
+	height: 600px;
+	opacity: 0.8;
+}
+.table-cell{
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    color: #fff;
+    transform: translate(-50%,-50%);
+}
+.table-cell h1{
+	color: #fff;
     font-size: 50px;
-}
-
-.text h3 {
-    position: absolute;
-    border: 2px solid #fff;
-    top: 80%;
-    color: white;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-transform: uppercase;
-    font-size: 25px;
+    font-family: 'Great Vibes', cursive;
 }
 
-.text h3:hover {
-    background: #000;
-    cursor: pointer;
+.table-cell h2{
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+}
+.table-cell a{
+    text-transform: uppercase;
+}
+/*Scroll Top*/
+#return-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: block;
+    text-decoration: none;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 40px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: transparent;
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+.icons{
+	display: flex;
+	position: absolute;
+	top:0;
+	left: 37%;
+	color: #fff;
+}
+
+.icons li {
+	list-style-type: none;
+	margin-top: -30px;
+}
+.icons li a{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  font-size: 16px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #fff;
+  z-index: 1;
+  text-align: center;
+}
+
+.icons li a .fa{
+	position: relative;
+	color: #262626;
+	transition: .5s;
+	z-index: 2;
+}
+.icons li a:hover .fa{
+	color: #fff;
+	transform: rotateY(360deg);
+}
+.icons li a::before{
+	content: '';
+	position: absolute;
+	top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: 2;
+}
+.icons li a:hover::before{
+   top: 0;
+}
+
+.icons li:nth-child(1) a::before {
+    background: #3b5999;     
+}
+.icons li:nth-child(2) a::before {
+background: #55acee;
+}
+.icons li:nth-child(3) a::before {
+background: #dd4b39;
+}
+.icons li:nth-child(4) a::before {
+background: #0077B5;
+}
+.icons li:nth-child(5) a::before {
+background: #e4405f;
+}
+
+/*Carousel style*/
+.carousel-inner,
+.carousel,
+.item,
+.container,
+.fill {
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+.slide-wrapper {
+    display: inline;
+}
+.slide-wrapper .container {
+    padding: 0px;
 }
 
 
+/*------------------------------ vertical bootstrap slider----------------------------*/
+.carousel-inner>.item.next,
+.carousel-inner>.item.active.right {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    top: 0;
+    left: 0;
+}
+.carousel-inner>.item.prev,
+.carousel-inner>.item.active.left {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translate Y(-100%);
+    -o-transform: translateY(-100%);
+    top: 0;
+    left: 0;
+}
+.carousel-inner>.item.next.left,
+.carousel-inner>.item.prev.right,
+.carousel-inner>.item.active {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    top: 0;
+    left: 0;
+}
+
+
+/*------------------------------- vertical carousel indicators ------------------------------*/
+.carousel-indicators {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 20px;
+    right: 10px;
+    left: auto;
+    width: auto;
+}
+.carousel-indicators li {
+    display: inline-block !important;
+    margin: 9px !important;
+    border: 1px solid #00a199;
+}
+.carousel-indicators li.active {
+    margin: 8px !important;
+    background: #00a199;
+}
+
+/*-------- Animation slider ------*/
+.animated {
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -ms-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+.carousel-img {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+.item img {
+    margin: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.item1 .carousel-img img,
+.item1.active .carousel-img img {
+    max-height: 300px;
+}
+.item1.active .carousel-img img.animated {
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -ms-animation-delay: 0.3s;
+}
+.item .carousel-desc {
+    color: #fff;
+    text-align: center;
+}
+.item h2 {
+    font-size: 50px;
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+}
+.item p {
+    animation-delay: 2.5s;
+    animation-duration: 1s;
+    width: 50%;
+    margin: auto;
+}
+
+.item2 .carousel-img img,
+.item2.active .carousel-img img {
+    max-height: 300px;
+}
+.item2.active .carousel-img img.animated {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
+    animation-duration: 3s;
+    animation-delay: 0.3s
+}
+.item2 h2,
+item2.active h2 {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 5s ease;
+}
+.item2.active h2.animated {
+    visibility: visible;
+    opacity: 1;
+    animation-delay: 3s;
+}
+
+.item .fill {
+    padding: 0px 30px;
+    display: table;
+}
+.item .inner-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+.item3 .col-md-6 {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    width: 49%;
+}
+
+.item3.active .carousel-img img.animated {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
+    animation-duration: 2s;
+    animation-delay: 0.3s
+}
+.item3 h2,
+item3.active h2 {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 5s ease;
+}
+.item.item3 .carousel-desc {
+    text-align: left;
+}
+.item3.active h2.animated {
+    visibility: visible;
+    opacity: 1;
+    animation-delay: 1.5s
+}
+.item3 p,
+item3.active p {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 5s ease;
+    width: 100%;
+}
+.item3.active p.animated {
+    visibility: visible;
+    opacity: 1;
+    animation-delay: 2.5s;
+}
+
+@media(max-width:991px) {
+    .item .carousel-desc,
+    .item.item3 .carousel-desc {
+        text-align: center;
+    }
+
+    .item .carousel-desc p {
+        width: 80%;
+    }
+
+    .item3 .col-md-6 {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media(max-width:768px) {
+    .item .carousel-img img,
+    .item.active .carousel-img img {
+        max-height: 155px;
+    }
+
+    .item h2 {
+        font-size: 30px;
+        margin-top: 0px;
+    }
+
+    .item .carousel-desc p {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+@media(max-width:480px) {
+    .item h2 {
+        font-size: 30px;
+    }
+
+    .item .carousel-desc p {
+        width: 100%;
+    }
+}
