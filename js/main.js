@@ -3,16 +3,20 @@
 var app = angular.module("PizzaApp", ['ngRoute']);
 app.config(function($routeProvider){
 	$routeProvider
-	.when('/home',{
-		templateUrl:'./templates/home.html'
+    .when("/",{
+        templateUrl: './templates/home.html',
+    })
+    .when('/deals',{
+		templateUrl:'./templates/deals.html',
+        controlller:'carouselCtrl'
 	})
-	
-	.when('/deals',{
-		templateUrl:'./templates/deals.html'
-	})
-    .when('/ownpizza',{
-        templateUrl:'./templates/OwnPizza.html'
-    });
+    .when('/menu',{
+        templateUrl:'./templates/menu.html'
+    })
+
+    .otherwise({
+        redirectTo:'/'
+});
 
 });
 
@@ -148,6 +152,7 @@ $('#return-to-top').click(function() {      // When arrow is clicked
     }, 500);
 });
 
+       // email
 $("#send").click(function(){
   (function(){
       emailjs.init("user_jY0afhRYaSk2r0hFmQTzM");
@@ -155,6 +160,17 @@ $("#send").click(function(){
   emailjs.send("jaychander36_gmail_com","template_XzYgdsGv",{name: "James", notes: "Check this out!"});
 
 });
+// responsive
+
+// Mobile Navigation
+$('.mobile-toggle').click(function() {
+    if ($('.sticky').hasClass('open-nav')) {
+        $('.sticky').removeClass('open-nav');
+    } else {
+        $('.sticky').addClass('open-nav');
+    }
+});
+
    
 
 }]);
