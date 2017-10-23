@@ -428,11 +428,7 @@ video {
     top: 0;
     left: 0;
 }
-
-
-
 /*------------------------------- vertical carousel indicators ------------------------------*/
-
 .carousel-indicators {
     position: absolute;
     top: 0;
@@ -478,8 +474,6 @@ video {
 
 .item img {
     margin: auto;
-    visibility: hidden;
-    opacity: 0;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -587,10 +581,6 @@ item3.active h2 {
     transition: all 5s ease;
 }
 
-.item.item3 .carousel-desc {
-    text-align: left;
-}
-
 .item3.active h2.animated {
     visibility: visible;
     opacity: 1;
@@ -599,10 +589,8 @@ item3.active h2 {
 
 .item3 p,
 item3.active p {
-    visibility: hidden;
-    opacity: 0;
     transition: all 5s ease;
-    width: 100%;
+    width: 50%;
 }
 
 .item3.active p.animated {
@@ -780,4 +768,12 @@ h3 {
 .parallax2 {
     background: url("../images/stretch2.jpg");
     min-height: 400px;
+}
+.imgSizeCrsl{
+    height: 350px;
+    width: 300px;
+}
+#myCarousel{
+    padding-top: 85px;
+    height: 570px !important;
 }

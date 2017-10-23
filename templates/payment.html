@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Pay Here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+
+<body>
+
+	<form ng-app="myApp" ng-controller="myctrl" name="myform" novalidate>
+		<fieldset>
+			<legend>Pesonal Information</legend>
+			<table>
+				<tr>
+					<td><label>Name :</label></td>
+					<td><input type="text" name="myName" ng-model="myName" ng-pattern='/^[a-zA-Z\s]*$/' required></td>
+					<td><span style="color:red">
+            			<span ng-show="myform.myName.$touched  && myform.myName.$invalid">Valid Username is Required.</span>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Address :</label></td>
+					<td><textarea name="myAddress" ng-model="myAddress" rows="5" cols="22" required></textarea></td>
+					<td><span style="color: red">
+						<span ng-show= "myform.myAddress.$touched  && myform.myAddress.$invalid">Address is Required.</span>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Email :</label></td>
+					<td><input type="text" name="input" ng-model="text" ng-pattern='reg' required></td>
+					<td><span style="color: red" role="alert" >
+						<span class="error" ng-show="myform.input.$error.pattern">Not valid email!</span></span>
+						<span style="color: red" class="error" ng-show="myform.input.$error.required">Email is Required!</span>
+					</td>
+					
+				</tr>
+				<tr>
+					<td><label>Phone No :</label></td>
+					<td><input type="text" name="phone" ng-model="phone" ng-pattern='/^[0-9]*$/' maxlength="10" required></td>
+					<td><span style="color: red">
+						<span ng-show = "myform.phone.$touched  && myform.phone.$invalid">Valid Phone Number is Required.</span>
+						</span>
+					</td>
+				</tr>
+			</table>
+			<!--			<fieldset>-->
+			<legend><br>Payment Information</legend>
+			<table>
+				<tr>
+					<td><input type="radio" name="payment" value="cash" ng-model="cash" required>Cash On Delivery</td>
+					<td><input type="radio" name="payment" value="card" ng-model="card" required>Visa/Mastercard</td>
+					<td><span style="color: red"><span ng-show = "myform.payment.$untouched && myform.payment.$error.required">Select Payment Type</span></span>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Card Holder's Name :</label></td>
+					<td><input type="text" name="chname" ng-model="chname" ng-pattern='/^[a-zA-Z\s]*$/' required></td>
+					<td><span style="color: red"><span ng-show="myform.chname.$touched  && myform.chname.$invalid">Valid Name is Required.</span>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Card Number :</label></td>
+					<td><input type="text" name="number" ng-model="number" ng-pattern='/^[0-9]*$/' maxlength="16" required></td>
+					<td><span style="color: red"><span ng-show = "myform.number.$touched  && myform.number.$invalid">Valid Card Number is Required</span>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Expiry Date:</label></td>
+					<td><select name="mydate" ng-model="mydate" required ng-options="c.code as c.name for c in date1">
+            <option value="">-Mon-</option>
+            </select><select name="myyear" ng-model="myyear" required ng-options="c.code as c.name for c in Year1">
+            <option value="">-Year-</option>
+            </select></td>
+					<td><span style="color:red" ng-show="myform.mydate.$error.required && myform.mydate.$touched || myform.myyear.$error.required && myform.myyear.$touched ">Expiry Date is Required.</span></td>
+				</tr>
+				<tr>
+					<td><label>Cvv :</label></td>
+					<td><input type="text" name="cvv" ng-model="cvv" maxlength="3" ng-pattern='/^[0-9]*$/'></td>
+					<td><span style="color: red"><span ng-show = "myform.cvv.$touched  && myform.cvv.$invalid"></span></span>
+					</td>
+				</tr>
+			</table>
+			<!--			</fieldset><br>-->
+			<button id="b1" name="submit" value="submit" ng-disabled="myform.myName.$touched  && myform.myName.$invalid||    
+myform.myAddress.$touched  && myform.myAddress.$invalid|| myform.input.$error.required || myform.phone.$touched  && myform.phone.$invalid || myform.payment.$untouched && myform.payment.$error.required || myform.chname.$touched  && myform.chname.$invalid || myform.number.$touched  && myform.number.$invalid || myform.date.$touched || myform.cvv.$touched  && myform.cvv.$invalid ">Submit</button>
+
+		</fieldset>
+	</form>
+<!--
+	<tt>text = {{email1.text}}</tt><br/>
+    <tt>myform.input.$valid = {{myform.input.$valid}}</tt><br/>
+    <tt>myform.input.$error = {{myform.input.$error}}</tt><br/>
+    <tt>myform.$valid = {{myform.$valid}}</tt><br/>
+    <tt>myform.$error.required = {{!!myform.$error.required}}</tt><br/>
+    <tt>myform.$error.email = {{!!myform.$error.email}}</tt><br/>
+-->
+
+
+	<script src="payment_pizza.js"></script>
+</body>
+
+</html>
