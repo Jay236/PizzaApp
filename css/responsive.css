@@ -1,7 +1,5 @@
-.open-nav {
-  max-height: 400px !important;
-}
-.open-nav .mobile-toggle {
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
+@media only screen and (max-width: 500px) {
+    footer {
+        background-color: lightblue;
+    }
 }
