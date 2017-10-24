@@ -7,7 +7,7 @@ app.config(function($routeProvider){
         templateUrl: './templates/home.html',
     })
     .when('/deals',{
-		templateUrl:'./templates/Deals.html',
+		templateUrl:'./templates/deals.html',
         controlller:'carouselCtrl'
 	})
     .when('/menu',{
