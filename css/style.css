@@ -79,9 +79,6 @@ header.sticky {
 }
 
 .main-menu {}
-
-.main-menu .links {}
-
 .main-menu .links li {
     display: inline-block;
 }
@@ -747,12 +744,15 @@ h3 {
 
 .modal-header {
     margin-top: 404px;
+    width: 400px;
 }
 
 #close {
-    border-radius: 15px;
+    border-radius: 12px;
     background: green;
     color: #fff;
+    margin-left: 122px;
+    margin-top: 20px;
 }
 
 #register {
@@ -777,4 +777,8 @@ h3 {
 #myCarousel{
     padding-top: 85px;
     height: 570px !important;
+}
+#RegisterModal
+{
+    padding-top: 55px;
 }
