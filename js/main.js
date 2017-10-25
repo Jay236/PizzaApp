@@ -79,9 +79,9 @@ app.controller('carouselCtrl', ['$scope', function ($scope)
                     });
                 }
             });
-            $('.item1.active img').animateCss('slideInDown');
-            $('.item1.active h2').animateCss('zoomIn');
-            $('.item1.active p').animateCss('fadeIn');
+            // $('.item1.active img').animateCss('slideInDown');
+            // $('.item1.active h2').animateCss('zoomIn');
+            // $('.item1.active p').animateCss('fadeIn');
 
         });
 

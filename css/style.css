@@ -54,7 +54,7 @@ header.sticky {
 .main-menu-area {}
 
 .main-menu-area .logo {
-    margin-top: 8px;
+    margin-top: 0;
     max-width: 130px;
     background: #fff;
     margin-right: -50px;
@@ -139,9 +139,10 @@ header.sticky {
 }
 
 .video-slider {
+
     width: 100%;
-    height: 550px;
-    opacity: 0.8;
+    height: 650px;
+    opacity: 0.6;
     overflow: hidden;
 }
 
@@ -151,7 +152,7 @@ video {
 
 .table-cell {
     position: absolute;
-    top: 50%;
+    top: 74%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -762,19 +763,6 @@ h3 {
     color: #fff;
 }
 
-.parallax1 {
-    background: url("../images/bg.png");
-    min-height: 400px;
-}
-
-.parallax2 {
-    background: url("../images/stretch2.jpg");
-    min-height: 400px;
-}
-.imgSizeCrsl{
-    height: 350px;
-    width: 300px;
-}
 #myCarousel{
     padding-top: 85px;
     height: 570px !important;
@@ -793,4 +781,28 @@ h3 {
 {
     height: 100px;
     width: 150px;
+}
+
+/*Parallax*/
+section{
+  width: 100%;
+  height: 100vh;
+  background: #262626;
+}
+section.sec2{
+  background-image: url('../images/bg3.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section.sec1{
+background: url('../images/bg.png');
+background-size: cover;
+background-attachment: fixed;
+}
+
+section.sec3{
+  background: url('../images/bg2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
